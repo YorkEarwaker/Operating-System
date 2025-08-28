@@ -3,6 +3,7 @@
 OS related things.
 
 See also, 
+* Automation, [GH](https://github.com/YorkEarwaker/Automation)
 * Electrical engineering, [GH](https://github.com/YorkEarwaker/Electrical-Engineering)
 
 ## References
