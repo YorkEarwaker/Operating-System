@@ -9,6 +9,8 @@ See also,
 
 Terms
 * Operating system, [WP](https://en.wikipedia.org/wiki/Operating_system)
+* Cross Complier, 
 
 Learning
 * OSDev, org [WS](https://wiki.osdev.org/Expanded_Main_Page), develop an OS, cross compilter, kernel, ... 
+* OSDev, org, Cross Complier, [WS](https://wiki.osdev.org/GCC_Cross-Compiler), 
