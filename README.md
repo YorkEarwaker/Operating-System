@@ -6,6 +6,14 @@ See also,
 * Automation, [GH](https://github.com/YorkEarwaker/Automation)
 * Electrical engineering, [GH](https://github.com/YorkEarwaker/Electrical-Engineering)
 
+## Status
+TODO
+* <todo: consider, >
+* <todo: consider, phone OS like Ubuntu, what are the options, https://ubports.com/, other linux phone OS distro's research, >
+
+DONE
+* <done: consider, intent to commit, >
+
 ## References
 
 Terms
