@@ -31,14 +31,15 @@ Wifi
 * 2026.08.12 
 * Open a serial screen sesson and log on to raspberry pi sbc, this example uses rpi z2w using a serial bridge chip to uart connection device
 ```
-<todo; consider, copy example from install content to be moved somewhere to this subporject from /een repo>
+$ sudo screen /dev/ttyUSB0 115200
 ```
 * In terminal window after logon
 * Start the raspi-config command line interface
 ```
-sudo raspi-config
+$ sudo raspi-config
 ```
 * A menu option selection is presented see below
+* select the `5 Localisation options` menu item
 ```
 Raspberry Pi Zero 2 W Rev 1.0, 512MB
 
@@ -62,9 +63,77 @@ Raspberry Pi Zero 2 W Rev 1.0, 512MB
 │                                                                              │
 └──────────────────────────────────────────────────────────────────────────────┘
 ```
-* select the `5 Localisation options` menu item
 * select the `L4 WLAN Country` menu item
-
+```
+┌─────────┤ Raspberry Pi Software Configuration Tool (raspi-config) ├──────────┐
+│                                                                              │
+│         L1 Locale       Configure language and regional settings             │
+│         L2 Timezone     Configure time zone                                  │
+│         L3 Keyboard     Set keyboard layout to match your keyboard           │
+│         L4 WLAN Country Set legal wireless channels for your country         │
+│                                                                              │
+│                                                                              │
+│                                                                              │
+│                                                                              │
+│                                                                              │
+│                                                                              │
+│                                                                              │
+│                                                                              │
+│                                                                              │
+│                     <Select>                     <Back>                      │
+│                                                                              │
+└──────────────────────────────────────────────────────────────────────────────┘
+```
+* Select the relevant country from the scroll down menu using arrow keys
+* Select the `<Ok>` button using Tab key
+* Press Enter/Return to confirm country selection choice
+```
+          ┌──────────────────────────────────────────────────────────┐
+          │ Select the country in which the Pi is to be used         │
+          │                                                          │
+          │                FI Finland               ↑                │
+          │                FM Micronesia            ▒                │
+          │                FR France                ▒                │
+          │                GB Britain (UK)          ▮                │
+          │                GD Grenada               ▒                │
+          │                GE Georgia               ▒                │
+          │                GF French Guiana         ▒                │
+          │                GH Ghana                 ▒                │
+          │                GL Greenland             ▒                │
+          │                GP Guadeloupe            ↓                │
+          │                                                          │
+          │                                                          │
+          │                                                          │
+          │                                                          │
+          │              <Ok>                  <Cancel>              │
+          │                                                          │
+          └──────────────────────────────────────────────────────────┘
+```
+* The `<Ok>` button is preselected and highlighted
+* Press Enter/Return to confirm country selection choice
+```
+          ┌──────────────────────────────────────────────────────────┐
+          │                                                          │
+          │ Wireless LAN country set to GB                           │
+          │                                                          │
+          │                                                          │
+          │                                                          │
+          │                                                          │
+          │                                                          │
+          │                                                          │
+          │                                                          │
+          │                                                          │
+          │                                                          │
+          │                                                          │
+          │                                                          │
+          │                                                          │
+          │                                                          │
+          │                                                          │
+          │                          <Ok>                            │
+          │                                                          │
+          └──────────────────────────────────────────────────────────┘
+```
+* returns you to the raspi-config main menu presented above
 
 
 ## References
