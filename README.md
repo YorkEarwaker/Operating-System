@@ -1,6 +1,6 @@
-# Operating System OS
+# Operating system os
 
-OS related things.
+Operating system OS related things. 
 
 See also, 
 * Automation, [GH](https://github.com/YorkEarwaker/Automation)
@@ -8,7 +8,7 @@ See also,
 
 ## Status
 TODO
-* <todo: consider, >
+* <todo: consider, end user computing euc like virtualization subproject /euc for vdi ras remote access daas and so on, with specific reference to AGW project ubuntu requirements in first instance>
 * <todo: consider, phone OS like Ubuntu, what are the options, https://ubports.com/, other linux phone OS distro's research, >
 
 DONE
