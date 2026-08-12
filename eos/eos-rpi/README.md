@@ -134,7 +134,20 @@ Raspberry Pi Zero 2 W Rev 1.0, 512MB
           └──────────────────────────────────────────────────────────┘
 ```
 * returns you to the raspi-config main menu presented above
+* select `<Back>` and the `<Finished>` to close the raspi-config cli tool
+* Run the following command to check WiFi is `enabled`
+```
+$ nmcli radio wifi                                  
+enabled
+```
+* If `diabled` was returned run the following command
+```
+$ nmcli radio wifi on
+```
+* Select a network
+```
 
+```
 
 ## References
 
