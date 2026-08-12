@@ -8,11 +8,11 @@ See also,
 
 ## Status
 TODO
-* <todo: consider, end user computing euc like virtualization subproject /euc for vdi ras remote access daas and so on, with specific reference to AGW project ubuntu requirements in first instance>
 * <todo: consider, phone OS like Ubuntu, what are the options, https://ubports.com/, other linux phone OS distro's research, >
 
 DONE
 * <done: consider, intent to commit, >
+* <todo: consider, end user computing euc like virtualization subproject /euc for vdi ras remote access daas and so on, with specific reference to AGW project ubuntu requirements in first instance, stub, wip>
 
 ## References
 
