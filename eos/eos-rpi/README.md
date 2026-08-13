@@ -109,6 +109,7 @@ Raspberry Pi Zero 2 W Rev 1.0, 512MB
           │                                                          │
           └──────────────────────────────────────────────────────────┘
 ```
+* You are asked to confirm your country selection
 * The `<Ok>` button is preselected and highlighted
 * Press Enter/Return to confirm country selection choice
 ```
@@ -134,7 +135,7 @@ Raspberry Pi Zero 2 W Rev 1.0, 512MB
           └──────────────────────────────────────────────────────────┘
 ```
 * returns you to the raspi-config main menu presented above
-* select `<Back>` and the `<Finished>` to close the raspi-config cli tool
+* select `<Back>` button followed by the `<Finished>` button to close the raspi-config cli tool
 * Run the following command to check WiFi is `enabled`
 ```
 $ nmcli radio wifi                                  
@@ -144,10 +145,23 @@ enabled
 ```
 $ nmcli radio wifi on
 ```
+* View available networks to connect to
+* Some example output for the cli `$ nmcli dev wifi list` (generae by Brave ai)
+```
+$ nmcli dev wifi list
+IN-USE  BSSID              SSID                 MODE   CHAN  RATE        SIGNAL  BARS    SECURITY
+        6C:14:6E:E5:35:F4  Home_Network_5G      Infra  149   405 Mbit/s  92      ▂▄▆█    WPA2
+*       C8:3A:35:58:B2:60  Office_WiFi          Infra  6     270 Mbit/s  75      ▂▄▆_    WPA2 802.1X
+        6C:14:6E:E5:35:F0  Guest_Network        Infra  8     130 Mbit/s  58      ▂▄▆_    WPA2
+        D8:32:14:46:81:E8  Neighbor_A           Infra  6     270 Mbit/s  42      ▂▄__    WPA1 WPA2
+        F0:2F:A7:CC:69:40  Free_Public_WiFi     Infra  11    65 Mbit/s   28      ▂___    WPA2
+        06:1F:5C:FE:AA:DF  Hidden_AP            Infra  1     54 Mbit/s   15      ▂___    --   
+
+```
 * Select a network
 ```
 
-```
+``
 
 ## References
 
