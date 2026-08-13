@@ -151,9 +151,9 @@ $ nmcli radio wifi on
 ```
 $ nmcli dev wifi list
 IN-USE  BSSID              SSID                 MODE   CHAN  RATE        SIGNAL  BARS    SECURITY
-        24:A4:3C:9E:D2:84  An-Example           Infra  1     195 Mbit/s  100     ▂▄▆█  WPA2
+        24:A4:3C:9E:D2:84  An-Example           Infra  1     195 Mbit/s  100     ▂▄▆█    WPA2
         6C:14:6E:E5:35:F4  Home_Network_5G      Infra  149   405 Mbit/s  92      ▂▄▆█    WPA2
-*       C8:3A:35:58:B2:60  Office_WiFi          Infra  6     270 Mbit/s  75      ▂▄▆_    WPA2 802.1X
+        C8:3A:35:58:B2:60  Office_WiFi          Infra  6     270 Mbit/s  75      ▂▄▆_    WPA2 802.1X
         6C:14:6E:E5:35:F0  Guest_Network        Infra  8     130 Mbit/s  58      ▂▄▆_    WPA2
         D8:32:14:46:81:E8  Neighbor_A           Infra  6     270 Mbit/s  42      ▂▄__    WPA1 WPA2
         F0:2F:A7:CC:69:40  Free_Public_WiFi     Infra  11    65 Mbit/s   28      ▂___    WPA2
@@ -175,7 +175,12 @@ Password (802-11-wireless-security.psk): •••••••••••••
 Device 'wlan0' successfully activated with 'a1900bed-baa9-47a3-affb-b640d0effe5d'.
 ```
 * After successful logon to WiFi network the UUID for that session is returned, the very long alpha-numeric-uuid above
-* ...
+* Run the following command and an * asterix will appear next the the WiFi network the raspberry pi is connected to
+```
+$ nmcli dev wifi list
+IN-USE  BSSID              SSID        MODE   CHAN  RATE        SIGNAL  BARS  SECURITY 
+*       24:A4:3C:9E:D2:84  An-Example  Infra  1     195 Mbit/s  78      ▂▄▆_  WPA2
+```
 
 ## References
 
