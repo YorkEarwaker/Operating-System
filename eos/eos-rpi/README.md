@@ -196,9 +196,10 @@ To logon via ssh
 * Determine the raspberry pi network IP Address
 * Use the WiFi admin console to identify the RPi IP Address
 * Useing the screen terminal connection to the raspberry pi run
-* Which will return ip4 address and ip6 address, not shown below
+* Which will return ip4 address and ip6 address ... not shown below
 ```
 $ hostname -I
+192.168.1.15 ...
 ```
 * Or from you host machine, the one using to connect to the raspberry pi
 * Open a terminal window and run `nmap -sn 192.168.1.0/24` replacing the subnet mask an necessary 
