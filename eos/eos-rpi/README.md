@@ -175,12 +175,64 @@ Password (802-11-wireless-security.psk): •••••••••••••
 Device 'wlan0' successfully activated with 'a1900bed-baa9-47a3-affb-b640d0effe5d'.
 ```
 * After successful logon to WiFi network the UUID for that session is returned, the very long alpha-numeric-uuid above
-* Run the following command and an * asterix will appear next the the WiFi network the raspberry pi is connected to
+* Run the following command and an * asterisk will appear next the the WiFi network the raspberry pi is connected to
 ```
 $ nmcli dev wifi list
 IN-USE  BSSID              SSID        MODE   CHAN  RATE        SIGNAL  BARS  SECURITY 
 *       24:A4:3C:9E:D2:84  An-Example  Infra  1     195 Mbit/s  78      ▂▄▆_  WPA2
 ```
+
+### Enable ssh
+* <todo: consider, example via command line interface>
+* <note; minimal config example already has use of empty ssh file in /bootfs? partition, install process section likely needs to be moved from /een/rpi-z to here above for cmopleteness >
+
+### Login via ssh
+* Status; Failure :( 
+* <note; consider, returned error suspected man in the middle attack, WARNING: REMOTE HOST IDENTIFICATION HAS CHANGED! >
+* <todo: consider, best practice with multiple sd card swap for rpi sbc instance >
+* After successful Wifi connection of raspberry pi sbc to a WiFi network
+
+To logon via ssh
+* Determine the raspberry pi network IP Address
+* Use the WiFi admin console to identify the RPi IP Address
+* Useing the screen terminal connection to the raspberry pi run
+* Which will return ip4 address and ip6 address, not shown below
+```
+$ hostname -I
+```
+* Or from you host machine, the one using to connect to the raspberry pi
+* Open a terminal window and run `nmap -sn 192.168.1.0/24` replacing the subnet mask an necessary 
+* This will return devices on the local network
+```
+$ nmap -sn 192.168.1.0/24
+Starting Nmap 7.94 ( https://nmap.org ) at 2026-08-13 11:30 EDT
+Warning: You are not root -- using TCP pingscan rather than ICMP
+Nmap scan report for 192.168.1.1
+Host is up (0.0032s latency).
+
+Nmap scan report for 192.168.1.15
+Host is up (0.015s latency).
+
+Nmap scan report for 192.168.1.20
+Host is up (0.0051s latency).
+
+Nmap done: 256 IP addresses (3 hosts up) scanned in 3.45 seconds
+```
+* Logon via ssh
+```
+$ ssh raspberrypi@192.168.1.15
+```
+* Status; Faulure, partial message returned.
+* Likely cause new micro sd card with new rpi os install
+* <todo: consider, use as example and find work around>
+```
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@    WARNING: REMOTE HOST IDENTIFICATION HAS CHANGED!     @
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+IT IS POSSIBLE THAT SOMEONE IS DOING SOMETHING NASTY!
+Someone could be eavesdropping on you right now (man-in-the-
+```
+
 
 ## References
 
