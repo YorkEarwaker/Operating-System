@@ -19,6 +19,10 @@ DONE
 ## Output - OS install and confiiguration
 Consider breakout different OS attempts to different pages 
 
+
+### RPi OS Trixi Lite - install
+* <todo: get the entry from sucessful previous attempt >
+
 ### RPi OS Trixi Lite -  cli config
 Assumuptions 
 * minimal config for initial OS install
@@ -27,7 +31,7 @@ Assumuptions
 * UART config set in intial minimal install setup
 
 Wifi
-* Status: TBD
+* Status: Success! :)
 * 2026.08.12 
 * Open a serial screen sesson and log on to raspberry pi sbc, this example uses rpi z2w using a serial bridge chip to uart connection device
 ```
@@ -233,6 +237,104 @@ $ ssh raspberrypi@192.168.1.15
 IT IS POSSIBLE THAT SOMEONE IS DOING SOMETHING NASTY!
 Someone could be eavesdropping on you right now (man-in-the-
 ```
+
+### Ubuntu Server 24 install 
+Status: Success! :)
+* Rationale for this is to have second OS for AGW project to acomplish dual compliation on for RPi OS and one for Ubuntu Server 24 OS
+* Find deltas in compilation process from successful deployment and test
+
+Write Ubuntu Server 24 to micro SD card
+* Put the micro SD card into a micro SD card adapter and insert adapter into host machine
+* Open the disk imager Raspberry Pi Imager 2.0.10.x
+* Select the RPi device type to flash drive for
+```
+Device
+Raspberry Pi Zero 2 W
+```
+* Next
+* Get preinstalled file previously downloaded manually
+* Downloaded 5 August 2026 from Ubuntu web site
+```
+OS>Use Custom
+ubuntu-24.04.4-preinstalled-server-arm64+raspi.img.xz
+```
+* Next
+* Select your storage device
+* tick exclude system drives to avoid accidentally overwriting the hosts hd/ssd 
+* A micro SD adapter with 64 GB micro SD in this instance
+* The micro SD can be smaller 32 GB or less, look at the RPi docs web site for micro SD card sizing guidance
+* Click on the SD card shown to select it for flashing
+```
+Storage
+Exclude system drives
+Internal SD card reader (Verbatim SD)
+58.2 GB
+Mounted as /media/york-earwaker/Verbatim SD
+```
+* Next
+* In this instance the customization menu option was not selected
+```
+Customization
+```
+* Write the image to the SD card selected
+```
+Write image
+Review your choices and write image to the storage device
+
+Summary
+Device             Raspberry Pi Zero 2 W
+Operating system   ubuntu-24.04.4-preinstalled-server-arm64+raspi.img.xz
+Storage            Internal SD card reader (Verbatim SD)
+```
+* WRITE
+* Pop up appears, two buttons Cancel and ...
+* Select the button 'I UNDERSTAND, ERASE AND WRITE'
+```
+You are about to ERASE all data on: Internal SD card reader (Verbatim SD)
+This action is permanent and cannot be undone
+```
+* Writing image screen is shown
+* With a cancel write button, selecting this will cancel the write but the micro sd card has already been erased.
+```
+Writing image
+Writing in progress - do not disconnect the storage device
+
+                    Writing... 28%
+===========-----------------------------------------
+
+```
+* Writing image
+* Verification after writing
+```
+Writing image
+Writing in progress - do not disconnect the storage device
+
+                    Verifying... 37%
+==================-----------------------------------
+           Verifying written data (51.1 MB's)
+```
+* Done
+* Select the finish button
+```
+Writing complete!
+
+Your choices
+Device             Raspberry Pi Zero 2 W
+Operating system   ubuntu-24.04.4-preinstalled-server-arm64+raspi.img.xz
+Storage            Internal SD card reader (Verbatim SD)
+
+The storage device was ejected automatically. You can now remove it safely.
+```
+* Finish
+* After pressing finish the Raspberry Pi Imager closes automatically
+* There are now two sd card disk images available
+* On Ubuntu Desktop they appear in the left hand side panel
+* Remove the micro SD adapter from the host device
+* Remove the micro sd card from the adapter and insert the micro SD card into the Raspberry Pi Zero 2 W and power on the RPi Z2W. Alternatively if you are using a micro sd card adapter extension cable with the Raspberry Pi Zero 2 W - highly recommended - put the micro sd adapter still containing the micro sd care into the extension cable and power on the RPi Z2W.
+
+Log into Ubuntu Server 24 instance over serial bridge connection to Raspberry Pi Zero 2 W
+* Status: tbd
+* ... 
 
 
 ## References
