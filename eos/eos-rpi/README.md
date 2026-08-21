@@ -235,7 +235,12 @@ $ ssh raspberrypi@192.168.1.15
 @    WARNING: REMOTE HOST IDENTIFICATION HAS CHANGED!     @
 @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 IT IS POSSIBLE THAT SOMEONE IS DOING SOMETHING NASTY!
-Someone could be eavesdropping on you right now (man-in-the-
+Someone could be eavesdropping on you right now (man-in-the-middle attack)!
+It is also possible that a host key has just been changed.
+The fingerprint for the ...
+...
+Host key for 192.168.1.216 has changed and you have requested strict checking.
+Host key verification failed.
 ```
 
 ### Ubuntu Server 24 install 
@@ -334,8 +339,19 @@ The storage device was ejected automatically. You can now remove it safely.
 
 Log into Ubuntu Server 24 instance over serial bridge connection to Raspberry Pi Zero 2 W
 * Status: tbd
-* ... 
+* Assumtption the Raspberry Pi Zero 2 W is connected to the host machine via a serial bridge chip device.
+* The serial bridge chip device is using UART xyz GPIO pins to connect to the Raspberry Pi Zero 2 W
+* The serial bridge chip device is plugged into USB A port on the host machine
 
+First log on
+* Open a cli terminal on the host machine
+* Make a serial screen connection from the local host to the Raspberry Pi Zero 2 W
+```
+$ sudo screen /dev/ttyUSB01 115200
+```
+* use default Ubuntu username: ubuntu and default password: ubuntu
+* the system will prompt to change the uid and pwd the first time the Ubuntu Server 24 instance is logged into
+* 
 
 ## References
 
