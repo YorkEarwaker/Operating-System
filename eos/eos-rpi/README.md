@@ -346,12 +346,78 @@ Log into Ubuntu Server 24 instance over serial bridge connection to Raspberry Pi
 First log on
 * Open a cli terminal on the host machine
 * Make a serial screen connection from the local host to the Raspberry Pi Zero 2 W
+
+Open a terminal window 
+* ensure the serial board chip device is connected
 ```
-$ sudo screen /dev/ttyUSB01 115200
+$ lsusb
+Bus 001 Device 001: ID 1d6b:0002 Linux Foundation 2.0 root hub
+Bus 001 Device 002: ID 0cf3:e300 Qualcomm Atheros Communications QCA61x4 Bluetooth 4.0
+Bus 001 Device 003: ID 138a:0091 Validity Sensors, Inc. VFS7552 Touch Fingerprint Sensor
+Bus 001 Device 004: ID 04f3:24a1 Elan Microelectronics Corp. Touchscreen
+Bus 001 Device 005: ID 0c45:6713 Microdia Integrated_Webcam_HD
+Bus 001 Device 006: ID 10c4:ea60 Silicon Labs CP210x UART Bridge
+Bus 002 Device 001: ID 1d6b:0003 Linux Foundation 3.0 root hub
+```
+* Retrieve port to use for serial connection
+```
+$ sudo dmesg | grep -i tty
+[sudo] password for <your-user-name>: 
+[    0.010264] ACPI: SSDT 0x000000007855AE40 00050D (v02 INTEL  TbtTypeC 00000000 INTL 20160422)
+[    0.167761] printk: legacy console [tty0] enabled
+[   18.666544] Bluetooth: RFCOMM TTY layer initialized
+[ 6902.300476] usb 1-2: cp210x converter now attached to ttyUSB0
+```
+* in another separate terminal window
+* open a serial screen session up with the Raspberry Pi Zero 2 W
+```
+$ sudo screen /dev/ttyUSB0 115200
 ```
 * use default Ubuntu username: ubuntu and default password: ubuntu
 * the system will prompt to change the uid and pwd the first time the Ubuntu Server 24 instance is logged into
-* 
+* in a screen session the initial screen is entirely empty, enter the user name ubuntu, then the password prompt appears enter the password ubuntu
+* the following exchange was after an initial user id password authentiction error.
+```
+Authentication token manipulation error
+
+Ubuntu 24.04.4 LTS ubuntu ttyS0
+
+ubuntu login: ubuntu
+Password: 
+You are required to change your password immediately (administrator enforced).
+Changing password for ubuntu.
+Current password: 
+New password: 
+Retype new password: 
+Welcome to Ubuntu 24.04.4 LTS (GNU/Linux 6.8.0-1047-raspi aarch64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/pro
+
+ System information as of Tue Feb 10 03:24:06 UTC 2026
+
+  System load:  0.12              Swap usage:  0%       Users logged in: 0
+  Usage of /:   3.8% of 56.75GB   Temperature: 43.5 C
+  Memory usage: 43%               Processes:   126
+
+The list of available updates is more than a week old.
+To check for new updates run: sudo apt update
+
+
+The programs included with the Ubuntu system are free software;
+the exact distribution terms for each program are described in the
+individual files in /usr/share/doc/*/copyright.
+
+Ubuntu comes with ABSOLUTELY NO WARRANTY, to the extent permitted by
+applicable law.
+
+To run a command as administrator (user "root"), use "sudo <command>".
+See "man sudo_root" for details.
+
+ubuntu@ubuntu:~$ 
+```
+* Ubuntu 24.04 LTS is now sucessfully running on the Raspberry Pi Zero 2 W.
 
 ## References
 
