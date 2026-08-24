@@ -419,6 +419,47 @@ ubuntu@ubuntu:~$
 ```
 * Ubuntu 24.04 LTS is now sucessfully running on the Raspberry Pi Zero 2 W.
 
+Create user
+* Good practice not to sign in as system root
+```
+ubuntu@ubuntu:~$ sudo adduser citizen-developer
+info: Adding user `citizen-developer' ...
+info: Selecting UID/GID from range 1000 to 59999 ...
+info: Adding new group `citizen-developer' (1001) ...
+info: Adding new user `citizen-developer' (1001) with group `citizen-developer (1001)' ...
+info: Creating home directory `/home/citizen-developer' ...
+info: Copying files from `/etc/skel' ...
+New password: 
+Retype new password: 
+passwd: password updated successfully
+Changing the user information for citizen-developer
+Enter the new value, or press ENTER for the default
+        Full Name []: 
+        Room Number []: 
+        Work Phone []: 
+        Home Phone []: 
+        Other []: 
+Is the information correct? [Y/n] y
+info: Adding new user `citizen-developer' to supplemental / extra groups `users' ...
+info: Adding user `citizen-developer' to group `users' ...
+ubuntu@ubuntu:~$ sudo usermod -aG sudo citizen-developer
+ubuntu@ubuntu:~$ su - citizen-developer
+Password: 
+To run a command as administrator (user "root"), use "sudo <command>".
+See "man sudo_root" for details.
+
+citizen-developer@ubuntu:~$ sudo whoami
+[sudo] password for citizen-developer: 
+root
+citizen-developer@ubuntu:~$ 
+```
+
+Disable login as system root
+* <todo: consider, disable system root login>
+
+Enable SSH for the  new user `citizen-developer`
+* <todo: consider, enable ssh for citizen-develoer user >
+
 ## References
 
 Raspberry Pi
