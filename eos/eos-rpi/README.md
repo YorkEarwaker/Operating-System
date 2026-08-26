@@ -190,7 +190,7 @@ IN-USE  BSSID              SSID        MODE   CHAN  RATE        SIGNAL  BARS  SE
 ### Enable ssh
 * <todo: consider, example via command line interface>
 * <note; minimal config example already has use of empty ssh file in /bootfs? partition, install process section likely needs to be moved from /een/rpi-z to here above for cmopleteness >
-SSH login to single board computer with fixed ip address via many OS’s flashed to many micro sd cards [WS](https://discourse.ubuntu.com/t/ssh-login-to-single-board-computer-with-fixed-ip-address-via-many-oss-flashed-to-many-micro-sd-cards/86683)
+* SSH login to single board computer with fixed ip address via many OS’s flashed to many micro sd cards [WS](https://discourse.ubuntu.com/t/ssh-login-to-single-board-computer-with-fixed-ip-address-via-many-oss-flashed-to-many-micro-sd-cards/86683)
 * use of ~/.ssh/config as described in link above.
 
 ```
@@ -198,10 +198,10 @@ tbd dummy entry in config file example
 ```
 
 ### Login via ssh
-* Status; Failure :) 
+* Status; Success! :) 
 * <note; consider, returned error suspected man in the middle attack, WARNING: REMOTE HOST IDENTIFICATION HAS CHANGED! >
 * <todo: add success with ~/.ssh/config entry method below >
-* After successful Wifi connection of raspberry pi sbc to a WiFi network
+* After successful Wifi connection of raspberry pi sbc to a WiFi network, as this is the only network connection for the rpi z2w, ignoring special case of usb cable 
 
 To logon via ssh
 * Determine the raspberry pi network IP Address
@@ -469,7 +469,7 @@ Enable SSH for the  new user `citizen-developer`
 ### Enable ssh
 * <todo: consider, example via command line interface>
 * <note; minimal config example already has use of empty ssh file in /bootfs? partition, install process section likely needs to be moved from /een/rpi-z to here above for cmopleteness >
-SSH login to single board computer with fixed ip address via many OS’s flashed to many micro sd cards [WS](https://discourse.ubuntu.com/t/ssh-login-to-single-board-computer-with-fixed-ip-address-via-many-oss-flashed-to-many-micro-sd-cards/86683)
+* SSH login to single board computer with fixed ip address via many OS’s flashed to many micro sd cards [WS](https://discourse.ubuntu.com/t/ssh-login-to-single-board-computer-with-fixed-ip-address-via-many-oss-flashed-to-many-micro-sd-cards/86683)
 * use of ~/.ssh/config as described in link above.
 
 ```
