@@ -15,6 +15,7 @@ TODO
 
 DONE
 * <done: consider, intent to commit>
+* <done: consider, best practice with multiple sd card swap for rpi sbc instance, see link Tips&Tricks Ubunti community in enable ssh sub heading below,  >
 
 ## Output - OS install and confiiguration
 Consider breakout different OS attempts to different pages 
@@ -189,11 +190,17 @@ IN-USE  BSSID              SSID        MODE   CHAN  RATE        SIGNAL  BARS  SE
 ### Enable ssh
 * <todo: consider, example via command line interface>
 * <note; minimal config example already has use of empty ssh file in /bootfs? partition, install process section likely needs to be moved from /een/rpi-z to here above for cmopleteness >
+SSH login to single board computer with fixed ip address via many OS’s flashed to many micro sd cards [WS](https://discourse.ubuntu.com/t/ssh-login-to-single-board-computer-with-fixed-ip-address-via-many-oss-flashed-to-many-micro-sd-cards/86683)
+* use of ~/.ssh/config as described in link above.
+
+```
+tbd dummy entry in config file example
+```
 
 ### Login via ssh
-* Status; Failure :( 
+* Status; Failure :) 
 * <note; consider, returned error suspected man in the middle attack, WARNING: REMOTE HOST IDENTIFICATION HAS CHANGED! >
-* <todo: consider, best practice with multiple sd card swap for rpi sbc instance >
+* <todo: add success with ~/.ssh/config entry method below >
 * After successful Wifi connection of raspberry pi sbc to a WiFi network
 
 To logon via ssh
@@ -454,11 +461,24 @@ root
 citizen-developer@ubuntu:~$ 
 ```
 
-Disable login as system root
+### Disable login as system root
 * <todo: consider, disable system root login>
 
 Enable SSH for the  new user `citizen-developer`
 * <todo: consider, enable ssh for citizen-develoer user >
+### Enable ssh
+* <todo: consider, example via command line interface>
+* <note; minimal config example already has use of empty ssh file in /bootfs? partition, install process section likely needs to be moved from /een/rpi-z to here above for cmopleteness >
+SSH login to single board computer with fixed ip address via many OS’s flashed to many micro sd cards [WS](https://discourse.ubuntu.com/t/ssh-login-to-single-board-computer-with-fixed-ip-address-via-many-oss-flashed-to-many-micro-sd-cards/86683)
+* use of ~/.ssh/config as described in link above.
+
+```
+tbd dummy entry in config file example
+```
+
+### Login via ssh
+* Status; ?
+* <todo: consider, add process text, >
 
 ## References
 
