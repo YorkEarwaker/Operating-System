@@ -33,7 +33,7 @@ OS catalog - 2026.08.27
 | 02   | Ubuntu Server 24.04 LTS |    64 GB      |  ARM 64 bit   | yes               | n\a            | AGW PMS test env   | ubuntu-24.04.4-preinstalled-server-arm64+raspi.img.xz  |
 | 03   | Ubuntu Core 24.04 LTS   |    32 GB      |  ARM 64 bit   | no                | yes            | Evaluation         | ubuntu-core-24-arm64+raspi.img.xz                      |
 | 04   | RPi OS Trixie Lite      |    32 GB      |  ARM 64 bit   | no                | n\a            | Test rpi imager    | 2025-12-04-raspios-trixie-arm64-lite.img.xz            |
-| 05   | RPi OS Bookworm         |    32 GB      |  ARM 32 bit   | no                | n/a            | First logon rpiz2w | n/a PiHut purchase, preinstalled                       |
+| 05   | RPi OS Bookworm         |    32 GB      |  ARM 32 bit   | no                | n\a            | First logon rpiz2w | n/a PiHut purchase, preinstalled                       |
 
 ### RPi OS Trixi Lite - install
 * <todo: get the entry from sucessful previous attempt >
