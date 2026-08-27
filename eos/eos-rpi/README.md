@@ -27,12 +27,13 @@ Building a set of OS's for evaluation for embedded solutions for the AGW project
 * Note. The development environment is currently a Dell Intel 'box' with Ubuntu 24.04 LTS Desktop GNOME
 
 OS catalog - 2026.08.27
-| OS Name                 | Micro SD Card | Architecture  | SSH client alias  | SSH Ubuntu One | Use Case        | ISO                                                    |
-| :---------              | :----------:  | :----------   | :---------------- | :----------    | :-------        | :-----------                                           |
-| RPi OS Trixie Lite      |    64 GB      |  ARM 64 bit   | yes               | n\a            | AGW PMS test    | 2026-06-18-raspios-trixie-arm64-lite.img.xz            |
-| Ubuntu Server 24.04 LTS |    64 GB      |  ARM 64 bit   | yes               | n\a            | AGW PMS test    | ubuntu-24.04.4-preinstalled-server-arm64+raspi.img.xz  |
-| Ubuntu Core 24.04 LTS   |    32 GB      |  ARM 64 bit   | n\a               | yes            | Evaluation      | ubuntu-core-24-arm64+raspi.img.xz                      |
-| RPi OS Trixi Lite       |    32 GB      |  ARM 64 bit   | no                | n\a            | Test rpi imager | 2025-12-04-raspios-trixie-arm64-lite.img.xz            |
+| OS Name                 | Micro SD Card | Architecture  | SSH client alias  | SSH Ubuntu One | Use Case           | ISO                                                    |
+| :---------              | :----------:  | :----------:  | :---------------: | :------------: | :-------           | :-----------                                           |
+| RPi OS Trixie Lite      |    64 GB      |  ARM 64 bit   | yes               | n\a            | AGW PMS test env   | 2026-06-18-raspios-trixie-arm64-lite.img.xz            |
+| Ubuntu Server 24.04 LTS |    64 GB      |  ARM 64 bit   | yes               | n\a            | AGW PMS test env   | ubuntu-24.04.4-preinstalled-server-arm64+raspi.img.xz  |
+| Ubuntu Core 24.04 LTS   |    32 GB      |  ARM 64 bit   | no                | yes            | Evaluation         | ubuntu-core-24-arm64+raspi.img.xz                      |
+| RPi OS Trixie Lite      |    32 GB      |  ARM 64 bit   | no                | n\a            | Test rpi imager    | 2025-12-04-raspios-trixie-arm64-lite.img.xz            |
+| RPi OS Bookworm         |     8 GB      |  ARM 32 bit   | no                | n/a            | First logon rpiz2w | n/a PiHut purchase                                     |
 
 ### RPi OS Trixi Lite - install
 * <todo: get the entry from sucessful previous attempt >
