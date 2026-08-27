@@ -16,19 +16,22 @@ TODO
 * <todo: consider, collate informaton re os for rpi usage attemtps here, start with tasks matrix markup table>
 * <todo: consider, move os install notes from /rpi-z directory in /een repo to this location to simplify /een/rpi-z README.md page >
 * <todo: consider, icloud confiiguration, specific to rpi os Trixi + >
+* <todo: consider, breakout different OS attempts to different pages >
 
 DONE
 * <done: consider, intent to commit>
 * <done: consider, best practice with multiple sd card swap for rpi sbc instance, see link Tips&Tricks Ubunti community in enable ssh sub heading below,  >
 
 ## Output - OS install and confiiguration
-Consider breakout different OS attempts to different pages 
+Building a set of OS's for evaluation for embedded solutions for the AGW project.
+* Note. The development environment is currently a Dell Intel 'box' with Ubuntu 24.04 LTS Desktop GNOME
 
-OS listing - 2026.08.27
-| OS Name                 | Micro SD Card | Architecture | SSH alias  | SSH Ubuntu One |
-| :---------              | :----------:  | :----------: | :--------- | :---------- |
-| RPi OS Trixie Lite      |    64 GB      |     64 bit   | yes        | na          |
-| Ubuntu Server 24.04 LTS |    64 GB      |     64 bit   | yes        | na          |
+OS catalog - 2026.08.27
+| OS Name                 | Micro SD Card | Architecture | SSH alias  | SSH Ubuntu One | Use Case  | ISO                                                   |
+| :---------              | :----------:  | :----------: | :--------- | :---------- | :-------     | :-----------                                          |
+| RPi OS Trixie Lite      |    64 GB      |     64 bit   | yes        | na          | AGW PMS test | 2026-06-18-raspios-trixie-arm64-lite.img.xz           |
+| Ubuntu Server 24.04 LTS |    64 GB      |     64 bit   | yes        | na          | AGW PMS test | ubuntu-24.04.4-preinstalled-server-arm64+raspi.img.xz |
+
 
 
 ### RPi OS Trixi Lite - install
