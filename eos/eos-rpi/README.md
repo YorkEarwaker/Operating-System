@@ -1,11 +1,15 @@
 # Embedded operating systems for raspberry pi eos-rpi
 
-stub
+Exploring operating systems to use in embedded environments for single board computers SBC's.
+
+See also
+* Real time operrationg systems rtos [GH](https://github.com/YorkEarwaker/Operating-System/tree/main/rtos), for microcontroller MCU's 
 
 ## Notes
 
 Objectives
 * Observations on use of a number of operating systems from different groups with raspberry pi embedded systems
+* In the first instance concentrating on those which might be used for the AGW project
 
 ## Status
 TODO
@@ -19,6 +23,12 @@ DONE
 
 ## Output - OS install and confiiguration
 Consider breakout different OS attempts to different pages 
+
+OS listing - 2026.08.27
+| OS Name                 | Micro SD Card | Architecture | SSH alias  | SSH Ubuntu One |
+| :---------              | :----------:  | :----------: | :--------- | :---------- |
+| RPi OS Trixie Lite      |    64 GB      |     64 bit   | yes        | na          |
+| Ubuntu Server 24.04 LTS |    64 GB      |     64 bit   | yes        | na          |
 
 
 ### RPi OS Trixi Lite - install
